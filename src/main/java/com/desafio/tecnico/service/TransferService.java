@@ -79,11 +79,6 @@ public class TransferService {
 		
 	}
 
-	public void deleteTransfer(Transfer newTransfer) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	public void revertTransfer(Long id) {
 		Transfer transferReverted = findByIdOrThrowNotFoundException(id);
 		if (transferReverted.getTransferStatus().equals(TransferStatusEnum.Done)) {
