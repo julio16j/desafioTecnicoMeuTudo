@@ -133,7 +133,7 @@ public static final String BASE_URL = "/transfers";
 		return transfer -> {
 			if (!transfer.getReceiver().getCpf().equals(expectedTransfer.getReceiverId())) return false;
 			if (!transfer.getSender().getCpf().equals(expectedTransfer.getSenderId())) return false;
-			if (!transfer.getAmount().equals(expectedTransfer.getAmount())) return false;
+			if (!transfer.getAmount().equals(expectedTransfer.getAmount() / expectedTransfer.getInstallments())) return false;
 			if (!transfer.getTransactionDate().toLocalDate().equals(expectedTransfer.getTransferDate())) return false;
 			return true;
 			
