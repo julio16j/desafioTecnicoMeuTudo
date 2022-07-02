@@ -21,7 +21,7 @@ import com.desafio.tecnico.service.TransferService;
 
 @RestController
 @RequestMapping("transfers")
-public class TransferenciaController {
+public class TransferController {
 	
 	@Autowired
 	private TransferService service;

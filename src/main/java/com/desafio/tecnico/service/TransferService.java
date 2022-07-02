@@ -51,7 +51,7 @@ public class TransferService {
 			Transfer newTransfer = new Transfer();
 			newTransfer.setSender(sender);
 			newTransfer.setReceiver(receiver);
-			newTransfer.setAmount(transfer.getAmount());
+			newTransfer.setAmount(transfer.getAmount() / transfer.getInstallments());
 			newTransfer.setTransactionDate(LocalDateTime.now());
 			newTransfer.setScheduledDate(LocalDate.now().plusMonths(i));
 			newTransfer.setTransferStatus(TransferStatusEnum.Scheduled);
